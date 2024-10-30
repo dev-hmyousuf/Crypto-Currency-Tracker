@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body
+    class="bg-gradient-to-r from-blue-500 to-purple-500 text-white flex flex-col gap-6 justify-around"
+  >
+    <nav
+      class="backdrop-blur-md shadow-lg w-full fixed md:top-2 left-1/2 top-0 -translate-x-1/2 shadow-gray-50 z-10 p-4 border-gray-50 rounded-2xl md:w-2/3 md:mx-auto"
+    >
+      <div class="flex justify-between items-center">
+        <h1 class="text-xl font-bold">Crypto Price</h1>
+        <div
+          class="flex items-center justify-center gap-1 px-3 bg-gray-700 rounded-xl"
+        >
+          Currency :
+          <div class="flex">
+            <select
+              id="nationalCurrencies"
+              class="w-full p-3 bg-gray-700 rounded-md text-gray-300"
+            >
+              <option selected value="USD">Select Currency</option>
+              <!-- National currency options will be dynamically added here -->
+            </select>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br /><br /><br />
+
+    <div class="flex flex-col items-center justify-center min-h-screen mt-16">
+      <div class="w-full p-6 rounded-lg">
+        <!-- Header -->
+        <header class="text-center mb-4 w-1/2 mx-auto">
+          <h1 class="text-3xl font-semibold">Crypto Price Tracker</h1>
+          <p class="text-gray-400 mt-2">
+            Real-time prices of your favorite cryptocurrencies
+          </p>
+        </header>
+
+        <div class="w-[90%] md:w-2/3 mx-auto flex flex-col gap-2">
+          <!-- Search Bar -->
+          <form
+            action=""
+            id="search"
+            class="flex gap-2 justify-between items-center"
+          >
+            <input
+              type="search"
+              id="search-bar"
+              placeholder="Search for a cryptocurrency..."
+              class="w-full p-3 bg-gray-700 rounded-md text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+            <input
+              type="submit"
+              value="Search"
+              class="p-3 rounded-md bg-blue-500 flex justify-center items-center"
+            />
+          </form>
+
+          <!-- Crypto List -->
+          <ul id="crypto-list" class="flex flex-col gap-2">
+            <!-- Crypto items will be dynamically added here -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script linking -->
+    <script type="module" src="./assets/javascript/main.js"></script>
+  </body>
+</html>
